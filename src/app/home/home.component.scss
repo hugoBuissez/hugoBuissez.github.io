@@ -1,0 +1,59 @@
+.main-wrapper {
+
+  margin-top: 10%;
+
+  .center-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    .left-part {
+
+      p {
+        color: #7d7d7d;
+        margin-top: 50px;
+        width: 55%;
+      }
+
+      span {
+        display: block;
+        font-size: 4.3rem;
+        box-sizing: inherit;
+        line-height: 65px;
+        font-weight: 700;
+        width: fit-content;
+      }
+
+      .last-span {
+
+        position: relative;
+
+        &:after {
+          position: absolute;
+          top: 85px;
+          right: 50%;
+          content: "";
+          display: block;
+          width: 40%;
+          background: #E07A5F;
+          height: 5px;
+        }
+      }
+
+      .changing-span {
+        margin-left: 10%;
+      }
+    }
+
+
+    .home-image {
+      img {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+}

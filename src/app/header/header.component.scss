@@ -1,0 +1,82 @@
+.main-wrapper {
+  width: 60%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  li {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  li:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #696969;
+    transition: width .3s ease-in-out;
+  }
+
+
+  .left-title {
+    span {
+      color: #000;
+      font-size: 30px;
+      font-weight: 600;
+
+      &:after {
+        position: relative;
+        top: 10px;
+        content: "";
+        display: block;
+        height: 3px;
+        width: 70%;
+        background: #000;
+      }
+    }
+  }
+
+  .header-list {
+
+    width: 40%;
+
+    li:hover:after {
+      width: 70%;
+    }
+  }
+
+  .contact-list {
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    &-menu {
+      list-style: none;
+      margin-left: 120px;
+      width: 60%;
+
+
+      li:hover:after {
+        width: 100%;
+      }
+
+    }
+  }
+}
