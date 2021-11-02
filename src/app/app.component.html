@@ -1,2 +1,3 @@
-<app-header></app-header>
-<app-home></app-home>
+<app-header (pageClicked)="pageClickedHandler($event)"></app-header>
+<div *ngIf="currentPage=='resume-page'" [@inOutAnimation]>test</div>
+<app-home *ngIf="currentPage == 'home-page'" [@inOutAnimation]></app-home>

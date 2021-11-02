@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 
@@ -9,6 +9,9 @@ import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 })
 export class HeaderComponent implements OnInit {
 
+    @Output()
+    pageClicked: EventEmitter<string> = new EventEmitter<string>();
+
     constructor() {
     }
 
@@ -17,6 +20,10 @@ export class HeaderComponent implements OnInit {
     faMail = faEnvelope;
 
     ngOnInit(): void {
+    }
+
+    onPageClick(pageId: string) {
+        this.pageClicked.emit(pageId);
     }
 
 }
