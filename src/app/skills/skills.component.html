@@ -1,0 +1,22 @@
+<div class="view main-wrapper">
+    <div class="center-wrapper">
+        <div class="main-title">
+            <h2>Here is my area of experience ....</h2>
+        </div>
+
+        <div class="skills-wrapper">
+            <div class="skill-category" *ngFor="let s of skills; index as i;">
+                <div class="skill-category-title">
+                    <span class="skill-category-title-num">0{{i+1}}</span>
+                    <span>{{s.category}} <br> {{s.subCategory}}</span>
+                </div>
+
+                <div class="skill-list">
+                    <ul>
+                        <li *ngFor="let item of s.skills">{{item}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

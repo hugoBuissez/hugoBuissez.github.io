@@ -14,7 +14,7 @@ import {animate, style, transition, trigger} from "@angular/animations";
                     ':enter',
                     [
                         style({height: 0, opacity: 0}),
-                        animate('1s ease-out',
+                        animate('2s ease-in-out',
                             style({height: 300, opacity: 1}))
                     ]
                 ),
@@ -33,7 +33,7 @@ import {animate, style, transition, trigger} from "@angular/animations";
 export class AppComponent {
     title = 'portfolio';
 
-    currentPage = 'home-page';
+    currentPage = 'skills-page';
 
     pageClickedHandler($event: string) {
         this.currentPage = $event + "-page";
