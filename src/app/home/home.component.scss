@@ -71,7 +71,7 @@
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 5px solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  animation: typing 3s steps(40, end),
+  animation: typing 2.5s steps(30, end),
   blink-caret .75s step-end infinite;
 }
 
@@ -81,7 +81,7 @@
     width: 0
   }
   to {
-    width: 90%;
+    width: 85%;
   }
 }
 
