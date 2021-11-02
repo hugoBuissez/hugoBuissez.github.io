@@ -15,7 +15,7 @@
       p {
         color: #7d7d7d;
         margin-top: 50px;
-        width: 55%;
+        width: 80%;
       }
 
       span {
@@ -25,6 +25,7 @@
         line-height: 65px;
         font-weight: 700;
         width: fit-content;
+        letter-spacing: .07em; /* Adjust as needed */
       }
 
       .last-span {
@@ -44,7 +45,11 @@
       }
 
       .changing-span {
-        margin-left: 10%;
+        padding-left: 50px;
+      }
+
+      .span-typewriter {
+        width: max-content;
       }
     }
 
@@ -55,5 +60,37 @@
         height: 400px;
       }
     }
+  }
+}
+
+.invisible {
+  display: none !important;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 5px solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: typing 3s steps(40, end),
+  blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 90%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: #E07A5F;
   }
 }

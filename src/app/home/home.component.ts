@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 
 @Component({
     selector: 'app-home',
@@ -8,19 +8,17 @@ import {Component, OnInit} from '@angular/core';
 export class HomeComponent implements OnInit {
 
     interval: number = 0;
-    spanText = 'Front-end'
-    spanTexts: string[] = ['Front-end', 'Back-end', 'Junior']
-
-    constructor() {
-    }
-
-    changeSpanText(counter: number) {
-        this.spanText = this.spanTexts[counter];
-    }
+    counter: number = 0;
+    currentSpan: string = 'span0';
 
     ngOnInit(): void {
-        let counter = 0;
-        this.interval = setInterval(() => this.changeSpanText(counter++ % 3), 3000);
+        this.interval = setInterval(() => this.changeSpanText(this.counter), 4500);
+    }
+
+    changeSpanText(counter: number): void {
+        if (counter == 4) counter = 1;
+        this.currentSpan = 'span' + counter;
+        this.counter = (counter + 1);
     }
 
     ngOnDestroy(): void {

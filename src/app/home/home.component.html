@@ -1,10 +1,16 @@
 <div class="view main-wrapper">
     <div class="center-wrapper">
         <div class="left-part">
-            <span>I'm a</span>
-            <span class="changing-span">{{this.spanText}}</span>
-            <span class="last-span">developer</span>
-
+            <div class="home-title">
+                <span>I'm a</span>
+                <div class="span-typewriter">
+                    <span id="span1" class="changing-span typewriter" *ngIf="currentSpan == 'span0'">Front-end</span>
+                    <span id="span2" class="changing-span typewriter" *ngIf="currentSpan == 'span1'">Back-end</span>
+                    <span id="span3" class="changing-span typewriter" *ngIf="currentSpan == 'span2'">Junior</span>
+                    <span id="span4" class="changing-span typewriter" *ngIf="currentSpan == 'span3'">Passionate</span>
+                </div>
+                <span class="last-span">developer</span>
+            </div>
             <p>Hi I'm Hugo. Currently student at EPITA, computer science school based in Paris, I'm also intern for
                 Paris Corporate Housing as
                 Back-end programmer.</p>
