@@ -33,7 +33,7 @@ import {animate, style, transition, trigger} from "@angular/animations";
 export class AppComponent {
     title = 'portfolio';
 
-    currentPage = 'skills-page';
+    currentPage = 'projects-page';
 
     pageClickedHandler($event: string) {
         this.currentPage = $event + "-page";

@@ -8,6 +8,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { SkillsComponent } from './skills/skills.component';
         HomeComponent,
         ResumeComponent,
         SkillsComponent,
+        ProjectsComponent,
     ],
     imports: [
         BrowserModule,
